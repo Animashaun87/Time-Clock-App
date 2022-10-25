@@ -22,7 +22,7 @@ function setTime() {
 	const time = new Date();
 	const month = time.getMonth();
 	const day = time.getDay();
-	const date = time.getDate();
+	const date = time.getFullYear();
 	const hours = time.getHours();
 	const hoursForClock = hours >= 13 ? hours % 12 : hours;
 	const minutes = time.getMinutes();
@@ -38,5 +38,5 @@ function setTime() {
 	dateEl.innerHTML = `${days[day]}, ${months[month]} <span class="circle">${date}</span>`
      
 }
-setTime()
-setInterval(setTime, 1000)
+setTime();
+setInterval(setTime, 1000);
